@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringCalculator {
 	private String content;
 	private int[] numbers;
@@ -20,5 +22,9 @@ public class StringCalculator {
 
 	public int[] getNumbers() {
 		return this.numbers;
+	}
+
+	public int getTotalValue() {
+		return Arrays.stream(this.numbers).sum();
 	}
 }

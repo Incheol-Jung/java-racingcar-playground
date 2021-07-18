@@ -25,4 +25,17 @@ class StringCalculatorTest {
 		stringCalculator.setContents("1,2,3,4,d");
 		assertThatThrownBy(() -> stringCalculator.separate()).isInstanceOf(RuntimeException.class);
 	}
+
+	@Test
+	void 각_숫자의_합을_구한다() {
+		// given
+		StringCalculator stringCalculator = new StringCalculator();
+
+		// when
+		stringCalculator.setContents("1,2,3");
+		stringCalculator.separate();
+
+		// then
+		assertThat(stringCalculator.getTotalValue()).isEqualTo(6);
+	}
 }
