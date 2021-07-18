@@ -24,3 +24,10 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+4. 문자열 덧셈 계산기 기능 정리
+- 문자열을 ","로 구분짓는다. 
+- 구분지은 값이 숫자인지 확인한다. 
+  - 숫자 이외의 값 또는 음수를 전달하는 경우 RuntimeException을 발생한다. 
+- 각 숫자의 합을 구한다. 
+- 커스텀 구분자가 있는지 확인한다. 
+- 커스텀 문자열이 있을 경우 커스텀 문자열을 구분자로 셋팅한다. 
