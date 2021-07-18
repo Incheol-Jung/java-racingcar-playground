@@ -38,4 +38,17 @@ class StringCalculatorTest {
 		// then
 		assertThat(stringCalculator.getTotalValue()).isEqualTo(6);
 	}
+
+	@Test
+	void 커스텀_구분자가_있는지_확인한다() {
+		// given
+		StringCalculator stringCalculator = new StringCalculator();
+
+		// when
+		stringCalculator.setContents("//;\n1;2;3");
+		stringCalculator.separate();
+
+		// then
+		assertThat(stringCalculator.getTotalValue()).isEqualTo(6);
+	}
 }
