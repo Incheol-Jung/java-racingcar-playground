@@ -24,4 +24,17 @@ public class CarRacingGameTest {
 		assertThatThrownBy(() -> carRacingGame.setCars("abc,qwedsadsa,dsa,qwe,cxz")).isInstanceOf(
 			RuntimeException.class);
 	}
+
+	@Test
+	void 자동차를_이동할_시도_횟수를_설정한다() {
+		// given
+		CarRacingGame carRacingGame = new CarRacingGame();
+
+		// when
+		carRacingGame.setCars("abc,qwe,dsa,qwe,cxz");
+		carRacingGame.setRacingCount(5);
+		
+		// then
+		assertThat(carRacingGame.getRacingCount()).isEqualTo(5);
+	}
 }

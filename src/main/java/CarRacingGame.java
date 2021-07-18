@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class CarRacingGame {
 	private String[] cars;
+	private int racingCount;
 
 	public void setCars(String carNames) {
 		cars = carNames.split(",");
@@ -17,5 +18,13 @@ public class CarRacingGame {
 		if(isExistInvalidCar){
 			throw new RuntimeException("5글자 이상으로 설정된 자동차 이름이 있습니다.");
 		}
+	}
+
+	public void setRacingCount(int count) {
+		this.racingCount = count;
+	}
+
+	public int getRacingCount() {
+		return racingCount;
 	}
 }
