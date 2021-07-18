@@ -49,4 +49,18 @@ public class CarRacingGameTest {
 		// then
 		assertThat(car.getTryToGoTimes()).isEqualTo(1);
 	}
+
+	@Test
+	void 총_설정한_횟수_만큼_움직일수_있는_기회가_있다() {
+		// given
+		Car car = new Car();
+
+		// when
+		car.tryToGo(10);
+		car.tryToGo(10);
+		car.tryToGo(10);
+
+		// then
+		assertThat(car.getTryToGoTimes()).isEqualTo(3);
+	}
 }
