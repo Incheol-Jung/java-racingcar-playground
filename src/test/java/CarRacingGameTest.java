@@ -37,4 +37,16 @@ public class CarRacingGameTest {
 		// then
 		assertThat(carRacingGame.getRacingCount()).isEqualTo(5);
 	}
+
+	@Test
+	void 자동차를_움직이게_한다() {
+		// given
+		Car car = new Car();
+
+		// when
+		car.tryToGo(10);
+
+		// then
+		assertThat(car.getTryToGoTimes()).isEqualTo(1);
+	}
 }
